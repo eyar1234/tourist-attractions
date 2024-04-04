@@ -1,6 +1,6 @@
 # Turrists attractioend by geolocation and google places API'S
 
-## The APP take your coordinations and print you back the turrists attractioens arond you
+## The APP take your coordinations and print you back the tourist attractioens around you
 
   this project was example that was built along with google places API
   and show how to do the following:
