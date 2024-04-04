@@ -6,7 +6,7 @@ this project was example that was built along with google places API
 and show how to do the following:
 
 - create a custom web server with using HTTPRouter
-- create a simple REST API thet made from google places API
+- create a simple REST API thet made from google
 
 ## start
 
