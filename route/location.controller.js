@@ -20,6 +20,7 @@ async function locationData(req, res) {
     photoWidth: attractions.results[0].photos[0].width,
     photoReference: attractions.results[0].photos[0].photo_reference,
   };
+  // console.log(placeInfo);
 }
 
 module.exports = locationData;

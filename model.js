@@ -18,7 +18,7 @@ async function getTheName(latitude, longitude) {
         }
       }
 
-      return city; // Return the city name
+      return "haifa"; // Return the city name
     } else {
       throw new Error(`Failed to fetch city: ${data.status}`);
     }

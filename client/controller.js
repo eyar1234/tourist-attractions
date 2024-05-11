@@ -14,7 +14,14 @@ async function success(postion) {
   //get the data
   const dataArray = await coordsToData(latitude, longitude);
 
-  const dataObject = dataArray[page];
+  // remove duplicate objects
+  const uniqueDataArray = dataArray.filter(
+    (obj, index) =>
+      dataArray.findIndex((item) => item.name === obj.name) === index
+  );
+
+  // use the new object
+  const dataObject = uniqueDataArray[page];
 
   // render
 
@@ -27,7 +34,7 @@ async function success(postion) {
       page = 0;
     }
     page++;
-    renderTheCorrentObject(dataArray[page]);
+    renderTheCorrentObject(uniqueDataArray[page]);
     console.log(page);
   });
 }
