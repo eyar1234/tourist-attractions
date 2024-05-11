@@ -6,7 +6,7 @@ const locationRouter = require("./route/location.router.js");
 const ImageRouter = require("./route/image.router.js");
 app.use(
   cors({
-    origin: "localhost:3000",
+    origin: "localhost:8000",
   })
 );
 

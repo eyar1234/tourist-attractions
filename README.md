@@ -12,6 +12,8 @@ and show how to do the following:
 
 ## start
 
+create .env with google places key and PORT
+
 npm i
 
 npm start

@@ -1,9 +1,11 @@
+const axios = require("axios");
+
 async function getTheName(latitude, longitude) {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${process.env.GOOGLE_KEY}`
     );
-    const data = await response.json();
+    const data = response.data;
 
     if (data.status === "OK" && data.results.length > 0) {
       const addressComponents = data.results[0].address_components;
@@ -30,11 +32,11 @@ async function getTheName(latitude, longitude) {
 
 async function getTheAttractions(name) {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `https://maps.googleapis.com/maps/api/place/textsearch/json?query=$${name}+point+of+interest&language=he&key=${process.env.GOOGLE_KEY}`
     );
 
-    const data = await response.json();
+    const data = response.data;
     return data;
   } catch (error) {
     console.log(error);
